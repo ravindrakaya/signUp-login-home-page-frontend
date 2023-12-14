@@ -1,0 +1,90 @@
+.registration-container {
+  background-image: url("https://img.freepik.com/free-photo/abstract-surface-textures-white-concrete-stone-wall_74190-8189.jpg?w=996&t=st=1702399479~exp=1702400079~hmac=f4e27c844f77216679b4c2261324649d462a4bd27dc5876086756faef36c546c");
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Sans-serif";
+}
+.register-heading {
+  color: #040a06;
+}
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 8px;
+}
+.input-label {
+  color: black;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+.input-field {
+  height: 30px;
+  width: 300px;
+  border: 1px solid #475569;
+  border-radius: 5px;
+  background-color: #e6f6ff;
+  padding: 10px;
+}
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.checkbox-field {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
+}
+.checkbox-label {
+  margin-top: 2px;
+}
+.span-el {
+  color: #0b69ff;
+}
+.register-btn {
+  height: 30px;
+  width: 300px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #0b69ff;
+  color: #ffffff;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+.button-container {
+  align-self: center;
+}
+.error-msg {
+  color: #ff0b37;
+  margin: 0px;
+  margin-top: 2px;
+}
+.login-btn1 {
+  height: 30px;
+  width: 300px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #07af0a;
+  color: #ffffff;
+  border-radius: 5px;
+  margin-top: 0px;
+}
+.link-element1 {
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}

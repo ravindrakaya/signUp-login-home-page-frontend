@@ -1,0 +1,58 @@
+.login-form-container {
+  background-image: url("https://img.freepik.com/free-photo/abstract-surface-textures-white-concrete-stone-wall_74190-8189.jpg?w=996&t=st=1702399479~exp=1702400079~hmac=f4e27c844f77216679b4c2261324649d462a4bd27dc5876086756faef36c546c");
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: "Sans-serif";
+}
+.login-input-field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.login-label {
+  color: black;
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+.login-input {
+  height: 30px;
+  width: 300px;
+  border: 1px solid #475569;
+  border-radius: 5px;
+  background-color: #e6f6ff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.login-btn {
+  height: 30px;
+  width: 300px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #0b69ff;
+  color: #ffffff;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.link-element {
+  text-decoration: none;
+}
+.new-account-btn {
+  height: 30px;
+  width: 300px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: #07af0a;
+  color: #ffffff;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+.err-display {
+  color: #f20505;
+  margin-top: 0px;
+}
