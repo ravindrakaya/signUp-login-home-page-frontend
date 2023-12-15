@@ -1,20 +1,36 @@
 .registration-container {
-  background-image: url("https://img.freepik.com/free-photo/abstract-surface-textures-white-concrete-stone-wall_74190-8189.jpg?w=996&t=st=1702399479~exp=1702400079~hmac=f4e27c844f77216679b4c2261324649d462a4bd27dc5876086756faef36c546c");
+  background-image: url("https://img.freepik.com/free-photo/turquoise-colored-pen-mouse-fern-leaves-push-pins-wooden-surface_23-2147916271.jpg?w=996&t=st=1702633647~exp=1702634247~hmac=963c0cce161e2cd6fe8bc120996699603294f31a8ff1e1f80ea62610f5c1e8ae");
   background-size: cover;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   font-family: "Sans-serif";
 }
+.blog-container {
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: url("https://assets.ccbp.in/frontend/react-js/books-blog-bg.png");
+  background-size: cover;
+}
+.blog-title {
+  font-family: "Roboto";
+  color: white;
+  font-size: 16px;
+}
+
 .register-heading {
   color: #040a06;
 }
 .form-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
 }
 .input-container {
@@ -32,9 +48,10 @@
 .input-field {
   height: 30px;
   width: 300px;
-  border: 1px solid #475569;
+  border: none;
   border-radius: 5px;
-  background-color: #e6f6ff;
+  background-color: #ffffff;
+  outline: none;
   padding: 10px;
 }
 .checkbox-container {
@@ -51,7 +68,8 @@
   margin-top: 2px;
 }
 .span-el {
-  color: #0b69ff;
+  color: #ff0b37;
+  font-weight: 600;
 }
 .register-btn {
   height: 30px;

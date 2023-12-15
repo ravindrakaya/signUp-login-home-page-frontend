@@ -1,5 +1,5 @@
 .login-form-container {
-  background-image: url("https://img.freepik.com/free-photo/abstract-surface-textures-white-concrete-stone-wall_74190-8189.jpg?w=996&t=st=1702399479~exp=1702400079~hmac=f4e27c844f77216679b4c2261324649d462a4bd27dc5876086756faef36c546c");
+  background-image: url("https://img.freepik.com/free-vector/ripped-notes-rectangle-frame-background_53876-99423.jpg?w=996&t=st=1702633860~exp=1702634460~hmac=9c7b2efccd2659d51d7aa3631a933dc49ae6b2fee50b6cf9c9ce265c63524ff7");
   background-size: cover;
   min-height: 100vh;
   display: flex;
@@ -8,6 +8,21 @@
   justify-content: center;
   font-family: "Sans-serif";
 }
+.blog-container {
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: url("https://assets.ccbp.in/frontend/react-js/books-blog-bg.png");
+  background-size: cover;
+}
+.blog-title {
+  font-family: "Roboto";
+  color: white;
+  font-size: 16px;
+}
 .login-input-field {
   display: flex;
   flex-direction: column;
@@ -15,15 +30,17 @@
 }
 .login-label {
   color: black;
+  font-size: 20px;
   font-weight: 500;
   margin-bottom: 3px;
 }
 .login-input {
-  height: 30px;
+  height: 50px;
   width: 300px;
-  border: 1px solid #475569;
+  border: none;
+  outline: none;
   border-radius: 5px;
-  background-color: #e6f6ff;
+  background-color: #ffffff;
   padding: 10px;
   margin-bottom: 10px;
 }
@@ -41,18 +58,27 @@
 .link-element {
   text-decoration: none;
 }
-.new-account-btn {
-  height: 30px;
-  width: 300px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  background-color: #07af0a;
-  color: #ffffff;
-  border-radius: 5px;
-  margin-top: 10px;
-}
+
 .err-display {
   color: #f20505;
   margin-top: 0px;
+}
+.tag-login-para {
+  color: #ffffff;
+}
+.tag-login-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+.tag-login-btn {
+  height: 20px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: greenyellow;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 20px;
 }

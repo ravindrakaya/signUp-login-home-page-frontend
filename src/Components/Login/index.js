@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 import "./index.css";
 
@@ -13,16 +14,25 @@ class Login extends Component {
     event.preventDefault();
     const { username, password } = this.state;
     const userDetails = { username, password };
+    //console.log(userDetails);
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/login",
+        userDetails
+      );
+      console.log(response);
 
-    // console.log(userDetails);
-    const url = "http://localhost:3000/login";
-    const options = {
-      method: "POST",
-      body: JSON.stringify(userDetails),
-    };
-    const response = await fetch(url, options);
-    const data = await response.json();
-    console.log(data);
+      alert("Login Successful!");
+      if (response.status === 200) {
+        const a = document.createElement("a");
+        a.href = "http://localhost:3000/";
+        a.target = "_self";
+        a.click();
+      }
+    } catch (err) {
+      console.log(err);
+      alert("Invalid Valid Username or Password. Please try again.");
+    }
   };
 
   onChangePassword = (event) => {
@@ -41,42 +51,50 @@ class Login extends Component {
     const { username, password } = this.state;
 
     return (
-      <form className="login-form-container" onSubmit={this.onClickLoginBtn}>
-        <div className="login-input-field">
-          <label htmlFor="username" className="login-label">
-            Username
-          </label>
-          <input
-            type="text"
-            className="login-input"
-            id="username"
-            placeholder="Username"
-            value={username}
-            onChange={this.onChangeUsername}
-          />
+      <>
+        <div className="blog-container">
+          <h1 className="blog-title">My Blog</h1>
         </div>
-        <div className="login-input-field">
-          <label htmlFor="password" className="login-label">
-            Password
-          </label>
-          <input
-            type="password"
-            className="login-input"
-            id="password"
-            placeholder="Password"
-            value={password}
-            onChange={this.onChangePassword}
-          />
-        </div>
-        <button type="submit" className="login-btn">
-          Login
-        </button>
-        <Link to="/signup/" className="link-element">
-          <button type="button" className="new-account-btn">
-            Create Account
+        <form className="login-form-container" onSubmit={this.onClickLoginBtn}>
+          <div className="login-input-field">
+            <label htmlFor="username" className="login-label">
+              Username
+            </label>
+            <input
+              type="text"
+              className="login-input"
+              id="username"
+              placeholder="Username"
+              value={username}
+              onChange={this.onChangeUsername}
+            />
+          </div>
+          <div className="login-input-field">
+            <label htmlFor="password" className="login-label">
+              Password
+            </label>
+            <input
+              type="password"
+              className="login-input"
+              id="password"
+              placeholder="Password"
+              value={password}
+              onChange={this.onChangePassword}
+            />
+          </div>
+          <button type="submit" className="login-btn">
+            Login
           </button>
-        </Link>
-      </form>
+          <div className="tag-login-container">
+            <p className="tag-login-para">Don't you have account?</p>
+            <Link to="/signup/" className="link-element">
+              <button type="button" className="tag-login-btn">
+                Sign up
+              </button>
+            </Link>
+          </div>
+        </form>
+      </>
     );
   }
 }

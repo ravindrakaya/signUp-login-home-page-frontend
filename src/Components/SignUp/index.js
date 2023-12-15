@@ -90,11 +90,19 @@ class SignUp extends Component {
     }
 
     if (this.validateForm() && isChecked && isValidCaptcha) {
-      console.log("ok");
-
       try {
-        await axios.post("http://localhost:5000/signup", values);
+        const response = await axios.post(
+          "http://localhost:5000/signup",
+          values
+        );
         alert("User registered successfully!");
+        console.log(response.status);
+        if (response.status === 200) {
+          const a = document.createElement("a");
+          a.href = "http://localhost:3000/login/";
+          a.target = "_self";
+          a.click();
+        }
       } catch (error) {
         console.log(error);
         alert("Error during registration. Please try again.");
@@ -151,6 +159,9 @@ class SignUp extends Component {
 
     return (
       <div className="registration-container">
+        <div className="blog-container">
+          <h1 className="blog-title">My Blog</h1>
+        </div>
         <h1 className="register-heading">Sign up</h1>
         <form className="form-container" onSubmit={this.onClickRegisterBtn}>
           <div className="input-container">
@@ -248,7 +259,7 @@ class SignUp extends Component {
             />
             <label htmlFor="checkbox" className="checkbox-label">
               I agree to the
-              <span className="span-el">Terms and Conditions</span>
+              <span className="span-el">Terms and Conditions*</span>
             </label>
           </div>
 
